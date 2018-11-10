@@ -26,6 +26,7 @@ namespace ArraySearching
             int[] b = {4,3,67,2,7 };
             Console.WriteLine("{0} {1}",a.GetLength(0),a.GetLength(1));
             //Console.WriteLine(b.Min);
+
             Console.WriteLine("{0} {1}", GetMaxInMinInColumn(a).x, GetMaxInMinInColumn(a).y);
         }
         static Pair GetMaxInMinInColumn( int[,] a)
