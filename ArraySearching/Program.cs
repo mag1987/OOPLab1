@@ -1,5 +1,4 @@
 ﻿using System;
-//using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,54 +17,48 @@ namespace ArraySearching
         {
             int[,] a = 
             {
-                {3, 5,  3,  10, 7},
+                {3, 5,  3,  10, 5},
                 {1, 4,  5,  10, 8},
                 {5, 6,  9,  6,  10}, 
                 {7, 8,  12, 8,  11} //, {9,10,1,3,7}
             };
-            int[] b = {4,3,67,2,7 };
-            Console.WriteLine("{0} {1}",a.GetLength(0),a.GetLength(1));
-            //Console.WriteLine(b.Min);
+            Console.WriteLine("{0} {1}", MaxOfMinInColumns(a).x, MaxOfMinInColumns(a).y);
 
-            Console.WriteLine("{0} {1}", GetMaxInMinInColumn(a).x, GetMaxInMinInColumn(a).y);
         }
-        static Pair GetMaxInMinInColumn( int[,] a)
+        static Pair MinInColumn(int[,] a, int col)
         {
             Pair t;
             t.x = 0;
-            t.y = 0;
-            int minCol = a[0,0];
-            int maxRow = a[0, 0];
-            int old =0;
-            for (int j =0; j < a.GetLength(1); j++)
+            t.y = col;
+            int min = a[t.x, t.y];
+            for (int i = 1; i < a.GetLength(0); i++)
             {
-                minCol = a[0,j];
-                for (int i =0; i<a.GetLength(0); i++)
+                if (min > a[i, col])
                 {
-                    if (minCol > a[i, j])
-                    {
-                        minCol = a[i, j];
-                        t.x = i;
-                        old = i;
-                    }
-                }
-                if (j == 0)
-                {
-                    maxRow = minCol;
-                    t.y = 0;
-                }
-                else
-                {
-                    if (maxRow < minCol)
-                    {
-                        maxRow = minCol;
-                        t.y = j;
-                        t.x = old;
-                    }
+                    min = a[i, col];
+                    t.x = i;
                 }
             }
             return t;
         }
-        
+        static Pair MaxOfMinInColumns(int[,] a)
+        {
+            Pair t;
+            t.x = MinInColumn(a, 0).x;
+            t.y = 0;
+            int max = a[t.x, t.y];
+            for (int i = 1; i < a.GetLength(1); i++)
+            {
+                if (max < a[MinInColumn(a, i).x, i])
+                {
+                    t.x = MinInColumn(a, i).x;
+                    t.y = i;
+                    max = a[t.x, t.y];
+                }
+            }
+            return t;
+
+        }
+
     }
 }
