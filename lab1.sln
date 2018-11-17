@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraySearching", "ArraySear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningStrings", "LearningStrings\LearningStrings.csproj", "{1FDC22A2-3707-46FD-A94D-73E6B8BADA99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningRegEx", "LearningRegEx\LearningRegEx.csproj", "{469485EC-EFEC-4626-BBC9-4B1CE7B9ADAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1FDC22A2-3707-46FD-A94D-73E6B8BADA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FDC22A2-3707-46FD-A94D-73E6B8BADA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FDC22A2-3707-46FD-A94D-73E6B8BADA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{469485EC-EFEC-4626-BBC9-4B1CE7B9ADAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{469485EC-EFEC-4626-BBC9-4B1CE7B9ADAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{469485EC-EFEC-4626-BBC9-4B1CE7B9ADAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{469485EC-EFEC-4626-BBC9-4B1CE7B9ADAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
