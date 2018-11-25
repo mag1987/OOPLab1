@@ -11,7 +11,7 @@ namespace LearningStrings
         static void Main(string[] args)
         {
             string stringPart1 = "Жили-были дед, да баба. Ели";
-            string stringPart2 = " кашу с молоком, особенно дед.   Дед ";
+            string stringPart2 = " кашу с молоком, особенно дед.   Дедушка ";
             string stringPart3 = "на бабу рассердился и пошел кодить на сях.";
 
             StringBuilder tmp = new StringBuilder();
@@ -20,7 +20,7 @@ namespace LearningStrings
             tmp.Append(stringPart3);
 
             Console.WriteLine(tmp);
-            Console.WriteLine(CommonWord(GetSentences(tmp.ToString())));
+            Console.WriteLine("Общее слово: {0}", CommonWord(GetSentences(tmp.ToString())));
         }
         static string[] GetSentences(string s)
         {

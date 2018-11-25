@@ -20,7 +20,7 @@ namespace ArraySearching
                 {3, 5,  3,  10, 5},
                 {1, 4,  5,  10, 8},
                 {5, 6,  9,  6,  10}, 
-                {7, 8,  12, 8,  11} //, {9,10,1,3,7}
+                {7, 8,  12, 8,  11} 
             };
             Console.WriteLine("{0} {1}", MaxOfMinInColumns(a).x, MaxOfMinInColumns(a).y);
 
@@ -49,9 +49,10 @@ namespace ArraySearching
             int max = a[t.x, t.y];
             for (int i = 1; i < a.GetLength(1); i++)
             {
-                if (max < a[MinInColumn(a, i).x, i])
+                int xTemp = MinInColumn(a,i).x;
+                if (max < a[xTemp, i])
                 {
-                    t.x = MinInColumn(a, i).x;
+                    t.x = xTemp;
                     t.y = i;
                     max = a[t.x, t.y];
                 }

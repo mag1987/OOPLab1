@@ -14,10 +14,10 @@ namespace LearningRegEx
             string s1 = "Если эта проблема возникла раньше, позвоните по телефону 896 товарищам разработчикам.";
             string s2 = "Если эта проблема возникла раньше, позвоните по телефону (не знаю какому) товарищам разработчикам.";
 
-            Console.WriteLine("{0} {1}", s1, hasDigital(s1));
-            Console.WriteLine("{0} {1}", s2, hasDigital(s2));
+            Console.WriteLine("{0}\n {1}", s1, HasDigital(s1));
+            Console.WriteLine("{0}\n {1}", s2, HasDigital(s2));
         }
-        static string hasDigital(string s)
+        static string HasDigital(string s)
         {
             return Regex.IsMatch(s, @"\d") ? 
                 "В строке содержатся цифры"
